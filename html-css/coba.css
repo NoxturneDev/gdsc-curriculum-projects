@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: #ef9595;
+  background-size: cover;
+  background-position: center;
+}
+
+/*ubah font dekorasi si a*/
+a {
+  border-radius: 20px;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/*ubah dekorasi h1 dan h4*/
+h1 {
+  font-size: 2.5rem;
+  color: brown;
+}
+h4 {
+  font-size: 1.3rem;
+}
+
+/*button action (pas di klik)*/
+.button-act {
+  background-color: burlywood;
+  transition: scale 0.2 ease;
+}
+
+.button-act:hover {
+  scale: 1.05;
+  background-color: brown;
+}
+
+.button-act:active {
+  scale: 0.95;
+}
+
+/*NAVBARR*/
+/*posisi si navbar*/
+.head {
+  position: fixed;
+  height: 70px;
+  width: 100%;
+  padding: 1.3rem 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #6096b4;
+  backdrop-filter: blur(50px);
+}
+/*logo*/
+.logo {
+  font-size: 1.8rem;
+  color: brown;
+  background-size: cover;
+  background-position: center;
+}
+
+.navbar a {
+  margin-left: 2.5rem;
+  margin: 8px;
+  gap: 1.5rem;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+.navbar a:hover {
+  background: brown;
+}
+
+#check {
+  display: none;
+}
+.icons {
+  position: absolute;
+  right: 5%;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+/*content*/
+.jarak {
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: auto;
+  padding: 3rem 12%;
+}
+
+/*hero section*/
+.bghero {
+  background-image: url("https://t4.ftcdn.net/jpg/05/87/63/79/360_F_587637938_bnkZxzr0zLQtiva6AZZtLUNWnYvXQgQt.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.hero-section {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/*text*/
+.text {
+  color: #fff;
+}
+.text .deskripsi {
+  font-size: 0.7rem;
+}
+.text p {
+  padding: 5px 0px 10px 0px; /*top right bottom left*/
+}
+.text p a {
+  align-items: left;
+  color: #000;
+}
+
+/*about*/
+.img-about {
+  margin: auto;
+  height: 80%;
+  width: 50%;
+  border-radius: 20px;
+}
+.text-about {
+  padding-left: 3rem;
+}
+.row-about {
+  padding: 20px;
+  padding-left: 0px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.row-about .about-flex {
+  margin: 20px;
+  margin-left: 0px;
+}
+.row-about h4 {
+  border-radius: 20px;
+  /*font-size: 1rem;*/
+  padding: 0.5rem 2rem;
+  color: #000;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  background-color: burlywood;
+}
+
+/*menu*/
+.menu {
+  display: block;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu .row {
+  display: flex;
+  margin-top: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.menu .row .menu-card {
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+.menu .row .menu-card-img {
+  height: 80%;
+  border-radius: 50%;
+  width: 80%;
+}
+
+.menu .row .menu-card .menu-card-title {
+  margin: 1rem auto 0.5rem;
+}
+
+/*footer*/
+.jarak-foot {
+  width: 100%;
+  margin: auto;
+}
+
+.footer {
+  background: #fcddb0;
+  padding: 50px 0px 50px 0px;
+  height: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3rem 12%;
+}
+
+.footer-section {
+  width: 20%;
+  margin: 0 auto;
+}
+.footer-section .flex {
+  display: flex;
+}
+
+i {
+  padding: 4px;
+  padding-right: 10px;
+}
+
+/*perkecil ipad*/
+@media (max-width: 990px) {
+  /*nampilin klik icon humberger dan silang*/
+  .icons {
+    display: block;
+  }
+  #check:checked ~ .icons #menu-icon {
+    display: none;
+  }
+  .icons #close-icon {
+    display: none;
+  }
+  #check:checked ~ .icons #close-icon {
+    display: block;
+  }
+  /*navbar*/
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 40%;
+    height: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #6096b4;
+    backdrop-filter: blur(50px);
+    box-shadow: 0 0.5rem 1rem #fff;
+    overflow: hidden;
+    transition: 0.3s ease;
+  }
+  #check:checked ~ .navbar {
+    height: 20rem;
+  }
+  .navbar a {
+    margin: 1rem;
+    display: block;
+    font-size: 1.1rem;
+    text-align: center;
+    transition: 0.3s ease;
+  }
+
+  /*section*/
+  section {
+    text-align: center;
+    height: auto;
+  }
+
+  /*hero section*/
+  .hero-section {
+    margin-top: 50px;
+    display: block;
+    height: auto;
+  }
+
+  /*text*/
+  .text {
+    padding: 0;
+  }
+
+  /*about*/
+  .img-about {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  .row-about {
+    padding: 20px;
+  }
+  .row-about .about-flex {
+    margin: 20px;
+  }
+
+  /*menu*/
+  .menu p {
+    font-size: 1.2rem;
+  }
+  .menu .row {
+    margin-top: 2rem;
+    padding: 50px;
+    display: block;
+  }
+  /*footer*/
+  .footer {
+    margin: auto;
+    display: block;
+  }
+  .footer .footer-section {
+    padding: 15px;
+    width: 100%;
+  }
+  .footer-section .flex {
+    display: block;
+    text-align: center;
+  }
+}
+@media (max-width: 450px) {
+  .navbar {
+    width: 100%;
+  }
+  h1 {
+    font-size: auto;
+  }
+  .menu .row {
+    padding: 0px;
+  }
+  .row-about {
+    display: block;
+    align-items: center;
+  }
+}
